@@ -1,4 +1,4 @@
-FROM golang:1.15-alpine as golang
+FROM golang as golang
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN go run hello.go
 
 RUN go build hello.go
 
-FROM hello-world
+FROM scratch
 
 WORKDIR /app
 
